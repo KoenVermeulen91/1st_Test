@@ -34,6 +34,7 @@ names(g)
 names(h)
 
 #Reading data (reading tabular data)
-read.csv(~/Downloads/Data_Science_Specialization/Tests/Tests_R/1st_Test/Source_files/ratings.csv)
-
+read.csv("Source_files/ratings.csv")
+imdb <- read.csv("Source_files/ratings.csv")
+summary(imdb)
 
