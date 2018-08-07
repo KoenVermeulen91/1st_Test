@@ -38,3 +38,13 @@ read.csv("Source_files/ratings.csv")
 imdb <- read.csv("Source_files/ratings.csv")
 summary(imdb)
 
+classes <- sapply(imdb, class)
+classes
+
+plot(imdb$IMDb.Rating, ordered(imdb$IMDb.Rating))
+plot(imdb$Year, ordered(imdb$Year))
+plot(imdb$Your.Rating, ordered(imdb$Your.Rating))
+
+#Test missing value delete
+imdbcomplete <- complete.cases(imdb)
+imdbcomplete
