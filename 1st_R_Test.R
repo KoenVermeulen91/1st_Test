@@ -19,6 +19,21 @@ table(g)
 1 / Inf
 1 / 0
 0 / 0
+is.na(a)
+is.nan(c)
+is.na(g)
+is.nan(g)
 
+#Data frames is tabular data but in different data types (different than matrix)
+h <- data.frame(foo = 1:4, bar = c(T, T, F, F))
+h
+nrow(h)
+ncol(h)
+
+names(g)
+names(h)
+
+#Reading data (reading tabular data)
+read.csv(~/Downloads/Data_Science_Specialization/Tests/Tests_R/1st_Test/Source_files/ratings.csv)
 
 
