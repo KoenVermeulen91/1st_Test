@@ -36,6 +36,8 @@ names(h)
 #Reading data (reading tabular data)
 read.csv("Source_files/ratings.csv")
 imdb <- read.csv("Source_files/ratings.csv")
+imdb$Const <- as.character(imdb$Const)
+
 summary(imdb)
 
 classes <- sapply(imdb, class)
@@ -48,3 +50,18 @@ plot(imdb$Your.Rating, ordered(imdb$Your.Rating))
 #Test missing value delete
 imdbcomplete <- complete.cases(imdb)
 imdbcomplete
+
+#Vectors can be calculated with easily
+h <- b * f
+
+imdb$Date.Rated <- as.Date(imdb$Date.Rated)
+
+imdb.movies <- imdb[imdb$Title.Type == "movie", ]
+
+#Lijst genereren met de mogelijkheden in Genre
+
+imdb.movies$Animation <- ifelse(grepl("Animation", imdb.movies$Genres), 1, 0)
+
+mean(hw1[1:3, ]$Ozone)
+summary(imdb.movies)
+
